@@ -1,6 +1,6 @@
 package me.zuyte.admin.listeners.bw2023;
 
-import me.agent.teamselector.api.events.TeamSelectorChooseEvent;
+import com.tomkeuper.bedwars.teamselector.api.events.TeamSelectorChooseEvent;
 import me.zuyte.admin.Admin;
 import me.zuyte.admin.storage.Cache_BW2023;
 import org.bukkit.event.EventHandler;

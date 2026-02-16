@@ -81,7 +81,7 @@
         <dependency>
             <groupId>com.andrei1058.bedwars</groupId>
             <artifactId>bedwars-api</artifactId>
-            <version>22.3.4</version>
+            <version>22.7</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -113,11 +113,11 @@
             <systemPath>${project.basedir}/lib/proxy-plugin2023-1.0-SNAPSHOT.jar</systemPath>
         </dependency>
         <dependency>
-            <groupId>com.agent.teamselector</groupId>
-            <artifactId>teamselector</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <groupId>com.tomkeuper.bedwars</groupId>
+            <artifactId>BedWars2023-TeamSelector</artifactId>
+            <version>1.1</version>
             <scope>system</scope>
-            <systemPath>${project.basedir}/lib/teamselector-1.0-SNAPSHOT.jar</systemPath>
+            <systemPath>${project.basedir}/lib/BedWars2023-TeamSelector-1.1.jar</systemPath>
         </dependency>
     </dependencies>
 </project>

@@ -3,6 +3,7 @@ package me.zuyte.admin.support;
 import com.tomkeuper.bedwars.api.BedWars;
 import com.tomkeuper.bedwars.api.addon.Addon;
 import com.tomkeuper.bedwars.api.language.Language;
+import com.tomkeuper.bedwars.teamselector.api.TeamSelectorAPI;
 import me.zuyte.admin.Admin;
 import me.zuyte.admin.commands.bw2023.AdminCommand;
 import me.zuyte.admin.commands.bw2023.AdminTabComplete;
@@ -11,6 +12,9 @@ import me.zuyte.admin.storage.Messages;
 import me.zuyte.admin.subcommands.bw2023.AdminBWSubCommand;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.Plugin;
+import org.bukkit.plugin.RegisteredServiceProvider;
+
+import static org.bukkit.Bukkit.getLogger;
 
 public class BW2023 extends Addon implements IBedWars {
     private final Admin instance;

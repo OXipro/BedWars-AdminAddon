@@ -6,6 +6,7 @@ import com.tomkeuper.bedwars.api.arena.IArena;
 import com.tomkeuper.bedwars.api.arena.team.ITeam;
 import com.tomkeuper.bedwars.api.events.gameplay.TeamAssignEvent;
 import com.tomkeuper.bedwars.arena.Arena;
+import com.tomkeuper.bedwars.teamselector.api.TeamSelectorAPI;
 import me.zuyte.admin.Admin;
 import me.zuyte.admin.storage.Cache_BW2023;
 import org.bukkit.Bukkit;
@@ -24,6 +25,8 @@ import java.util.ArrayList;
 public class SetTeamSubCommand {
 
     BedWars.ArenaUtil arenaUtil = Admin.getInstance().bw2023.getArenaUtil();
+
+    TeamSelectorAPI teamSelectorAPI = Admin.getInstance().teamSelectorAPI;
 
     public SetTeamSubCommand(CommandSender commandSender, String[] args) {
         if (commandSender instanceof Player)
@@ -69,6 +72,9 @@ public class SetTeamSubCommand {
                 }
                 Cache_BW2023.setPlayerTeam(player, playerTeam);
                 playerTeam.addPlayers(player);
+                if (teamSelectorAPI != null) {
+                    teamSelectorAPI.setTeam(player, playerArena, playerTeam);
+                }
                 p.sendMessage(ChatColor.GREEN + "Successfully set " + args[1] + "'s Team to " + playerTeam.getColor().chat() + playerTeam.getName());
             } else {
                 if (playerArena.getTeam(player) != null) {
